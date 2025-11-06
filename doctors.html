@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cura - Find a Doctor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-heartbeat"></i>
+                Cura
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="doctors.html" class="active">Find a Doctor</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="doctors-list">
+        <div class="container">
+            <h1 class="section-title">Find Your Doctor</h1>
+            <p class="section-subtitle">Connect with our experienced medical professionals</p>
+            
+            <!-- CSS-only Filter Tabs -->
+            <div class="container">
+                <div class="filter-tabs">
+                    <input type="radio" name="filter" id="filter-all" checked>
+                    <label for="filter-all">All Doctors</label>
+                    
+                    <input type="radio" name="filter" id="filter-cardiology">
+                    <label for="filter-cardiology">Cardiology</label>
+                    
+                    <input type="radio" name="filter" id="filter-pediatrics">
+                    <label for="filter-pediatrics">Pediatrics</label>
+                    
+                    <input type="radio" name="filter" id="filter-mental">
+                    <label for="filter-mental">Mental Health</label>
+                    
+                    <input type="radio" name="filter" id="filter-primary">
+                    <label for="filter-primary">Primary Care</label>
+                    
+                    <input type="radio" name="filter" id="filter-womens">
+                    <label for="filter-womens">Women's Health</label>
+                </div>
+            </div>
+
+            <!-- Doctors Grid -->
+            <div class="doctors-grid">
+                <!-- Doctor cards copied from glm.html -->
+                <div class="doctor-card doctor-filter cardiology">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Robert Martinez</h3>
+                        <p class="doctor-specialty">Cardiologist</p>
+                        <div class="doctor-details">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Harvard Medical School</span>
+                        </div>
+                        <div class="doctor-details">
+                            <i class="fas fa-briefcase"></i>
+                            <span>15 years experience</span>
+                        </div>
+                        <div class="doctor-details">
+                            <i class="fas fa-language"></i>
+                            <span>English, Spanish</span>
+                        </div>
+                        <div class="doctor-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>4.9 (127 reviews)</span>
+                        </div>
+                        <form action="mailto:appointments@curahealth.com" method="post" enctype="text/plain" style="margin-top: 1rem;">
+                            <input type="hidden" name="doctor" value="Dr. Robert Martinez">
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                Book Appointment
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="doctor-card doctor-filter pediatrics">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Lisa Thompson</h3>
+                        <p class="doctor-specialty">Pediatrician</p>
+                        <div class="doctor-details">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Johns Hopkins University</span>
+                        </div>
+                        <div class="doctor-details">
+                            <i class="fas fa-briefcase"></i>
+                            <span>12 years experience</span>
+                        </div>
+                        <div class="doctor-details">
+                            <i class="fas fa-language"></i>
+                            <span>English</span>
+                        </div>
+                        <div class="doctor-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>4.8 (98 reviews)</span>
+                        </div>
+                        <form action="mailto:appointments@curahealth.com" method="post" enctype="text/plain" style="margin-top: 1rem;">
+                            <input type="hidden" name="doctor" value="Dr. Lisa Thompson">
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                Book Appointment
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="doctor-card doctor-filter mental">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Jennifer Wu</h3>
+                        <p class="doctor-specialty">Psychiatrist</p>
+                        <div class="doctor-details">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Stanford University</span>
+                        </div>
+                        <div class="doctor-details">
+                            <i class="fas fa-briefcase"></i>
+                            <span>10 years experience</span>
+                        </div>
+                        <div class="doctor-details">
+                            <i class="fas fa-language"></i>
+                            <span>English, Mandarin</span>
+                        </div>
+                        <div class="doctor-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>4.9 (156 reviews)</span>
+                        </div>
+                        <form action="mailto:appointments@curahealth.com" method="post" enctype="text/plain" style="margin-top: 1rem;">
+                            <input type="hidden" name="doctor" value="Dr. Jennifer Wu">
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                Book Appointment
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="doctor-card doctor-filter primary">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. David Kim</h3>
+                        <p class="doctor-specialty">Primary Care Physician</p>
+                        <div class="doctor-details">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>UCLA Medical School</span>
+                        </div>
+                        <div class="doctor-details">
+                            <i class="fas fa-briefcase"></i>
+                            <span>18 years experience</span>
+                        </div>
+                        <div class="doctor-details">
+                            <i class="fas fa-language"></i>
+                            <span>English, Spanish</span>
+                        </div>
+                        <div class="doctor-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span>4.7 (89 reviews)</span>
+                        </div>
+                        <form action="mailto:appointments@curahealth.com" method="post" enctype="text/plain" style="margin-top: 1rem;">
+                            <input type="hidden" name="doctor" value="Dr. David Kim">
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                Book Appointment
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="doctor-card doctor-filter womens">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Maria Garcia</h3>
+                        <p class="doctor-specialty">OB/GYN</p>
+                        <div class="doctor-details">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Mayo Clinic College</span>
+                        </div>
+                        <div class="doctor-details">
+                            <i class="fas fa-briefcase"></i>
+                            <span>14 years experience</span>
+                        </div>
+                        <div class="doctor-details">
+                            <i class="fas fa-language"></i>
+                            <span>English</span>
+                        </div>
+                        <div class="doctor-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>4.9 (203 reviews)</span>
+                        </div>
+                        <form action="mailto:appointments@curahealth.com" method="post" enctype="text/plain" style="margin-top: 1rem;">
+                            <input type="hidden" name="doctor" value="Dr. Maria Garcia">
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                Book Appointment
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="doctor-card doctor-filter cardiology">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Pierre Dubois</h3>
+                        <p class="doctor-specialty">Interventional Cardiologist</p>
+                        <div class="doctor-details">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>McGill University</span>
+                        </div>
+                        <div class="doctor-details">
+                            <i class="fas fa-briefcase"></i>
+                            <span>20 years experience</span>
+                        </div>
+                        <div class="doctor-details">
+                            <i class="fas fa-language"></i>
+                            <span>English, French</span>
+                        </div>
+                        <div class="doctor-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>5.0 (178 reviews)</span>
+                        </div>
+                        <form action="mailto:appointments@curahealth.com" method="post" enctype="text/plain" style="margin-top: 1rem;">
+                            <input type="hidden" name="doctor" value="Dr. Pierre Dubois">
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                Book Appointment
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Cura</h3>
+                <p>Your trusted healthcare partner providing comprehensive medical services with compassion and excellence.</p>
+                <div class="social-links" style="margin-top: 1rem;">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Find a Doctor</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="services.html">Primary Care</a></li>
+                    <li><a href="services.html">Cardiology</a></li>
+                    <li><a href="services.html">Pediatrics</a></li>
+                    <li><a href="services.html">Mental Health</a></li>
+                    <li><a href="services.html">Women's Health</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>123 Healthcare Avenue</li>
+                    <li>Medical District, MD 12345</li>
+                    <li>(555) 123-4567</li>
+                    <li>info@curahealth.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cura. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+</body>
+</html>
