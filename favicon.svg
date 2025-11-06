@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Cura heartbeat icon">
+  <!-- rounded square background using primary color -->
+  <rect width="64" height="64" rx="12" ry="12" fill="#10b981" />
+  <!-- ECG / heartbeat line -->
+  <path d="M6 36 L18 36 L24 18 L30 46 L34 26 L42 36 L58 36" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
