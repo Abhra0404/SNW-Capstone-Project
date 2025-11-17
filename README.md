@@ -18,11 +18,11 @@ We built this beast as a capstone project for our Social Network Whatever (SNW) 
 
 *(If you're a dev, fork this repo and add flamethrower integration. PRs welcome – or else.)*
 
-**One HTML. One CSS. One JS. Zero mercy.**
+**Pure HTML • CSS • JavaScript chaos • No frameworks • No mercy**
 
-
-### 🤖 DEMO TIME: WATCH THE MAGIC UNFOLD
-[Live Demo Link](https://abhra0404.github.io/SNW-Capstone-Project/)  
+  <a href="https://abhra0404.github.io/SNW-Capstone-Project/">
+    <img src="https://img.shields.io/badge/LIVE%20DEMO-Launch%20the%20madness-blue?style=for-the-badge" alt="Live Demo" width="250px">
+  </a>
 
 ---
 
