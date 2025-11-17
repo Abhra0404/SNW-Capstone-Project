@@ -11,11 +11,14 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
             <a href="index.html" class="logo">
                 <i class="fas fa-heartbeat"></i>
                 Cura
             </a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -27,8 +30,9 @@
 
     <section class="contact-section">
         <div class="container">
+            <!-- Default with underline -->
             <h1 class="section-title">Contact Us</h1>
-            <p class="section-subtitle">Get in touch with our team for any inquiries</p>
+          
             
             <div class="contact-container">
                 <div class="contact-info">
@@ -43,7 +47,7 @@
                         </div>
                         <div>
                             <h3>Main Location</h3>
-                            <p style="color: var(--text-muted);">123 Healthcare Avenue<br>Medical District, MD 12345</p>
+                            <p style="color: var(--text-muted);">123 Healthcare Avenue<br>Bengaluru, Karnataka 560001</p>
                         </div>
                     </div>
                     
@@ -53,7 +57,7 @@
                         </div>
                         <div>
                             <h3>Phone</h3>
-                            <p style="color: var(--text-muted);">Main: (555) 123-4567<br>Emergency: (555) 911-0000</p>
+                            <p style="color: var(--text-muted);">Main: +91 80 1234 5678<br>Emergency: +91 80 1800 0000</p>
                         </div>
                     </div>
                     
@@ -165,8 +169,8 @@
                 <h3>Contact Info</h3>
                 <ul>
                     <li>123 Healthcare Avenue</li>
-                    <li>Medical District, MD 12345</li>
-                    <li>(555) 123-4567</li>
+                    <li>Bengaluru, Karnataka 560001</li>
+                    <li>+91 80 1234 5678</li>
                     <li>info@curahealth.com</li>
                 </ul>
             </div>
@@ -175,5 +179,21 @@
             <p>&copy; 2025 Cura. All rights reserved. | Privacy Policy | Terms of Service</p>
         </div>
     </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
