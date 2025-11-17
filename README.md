@@ -1,4 +1,4 @@
-# 🏥 **CURA** 
+# <img src="https://abhra0404.github.io/SNW-Capstone-Project/favicon.svg" width="30" height="30" style="vertical-align: middle; margin-right: 12px; border-radius: 10px;"> **CURA**
 
 **CURA: Because waiting rooms are a war crime.** 💉✨
 
