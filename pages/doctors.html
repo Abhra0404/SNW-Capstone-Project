@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cura - Find a Doctor</title>
+    <link rel="stylesheet" href="../styles/doctors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <a href="../index.html" class="logo">
+                <i class="fas fa-heartbeat"></i>
+                Cura
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="doctors.html" class="active">Find a Doctor</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="doctors-list">
+        <div class="container">
+            <h1 class="section-title">Find Your Doctor</h1>
+            <p class="section-subtitle">Connect with our experienced medical professionals</p>
+            
+            <!-- Search and Filter Controls -->
+            <div class="search-filter-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search by doctor name or specialty...">
+                </div>
+                <div class="filter-dropdown">
+                    <i class="fas fa-filter"></i>
+                    <select id="specialtyFilter">
+                        <option value="all">All Specialties</option>
+                        <option value="Cardiology">Cardiology</option>
+                        <option value="Orthopedics">Orthopedics</option>
+                        <option value="Dermatology">Dermatology</option>
+                        <option value="Oncology">Oncology</option>
+                        <option value="ENT">ENT</option>
+                        <option value="Gynecology">Gynecology</option>
+                        <option value="Pediatrics">Pediatrics</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Doctors Grid - Dynamically populated -->
+            <div class="doctors-grid" id="doctorsGrid">
+                <!-- Doctor cards will be dynamically rendered here -->
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Cura</h3>
+                <p>Your trusted healthcare partner providing comprehensive medical services with compassion and excellence.</p>
+                <div class="social-links" style="margin-top: 1rem;">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Find a Doctor</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="services.html">Primary Care</a></li>
+                    <li><a href="services.html">Cardiology</a></li>
+                    <li><a href="services.html">Pediatrics</a></li>
+                    <li><a href="services.html">Mental Health</a></li>
+                    <li><a href="services.html">Women's Health</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>123 Healthcare Avenue</li>
+                    <li>Bengaluru, Karnataka 560001</li>
+                    <li>+91 80 1234 5678</li>
+                    <li>info@curahealth.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cura. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Doctor data array
+        const doctors = [
+            {
+                name: "Dr. Rajesh Kumar",
+                specialty: "Cardiology",
+                rating: 4.9,
+                reviews: 167,
+                experience: 18,
+                location: "Bengaluru, Karnataka",
+                image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop",
+                education: "AIIMS Delhi"
+            },
+            {
+                name: "Dr. Priya Sharma",
+                specialty: "Orthopedics",
+                rating: 4.8,
+                reviews: 156,
+                experience: 12,
+                location: "Mumbai, Maharashtra",
+                image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop",
+                education: "PGIMER Chandigarh"
+            },
+            {
+                name: "Dr. Angelina Bush",
+                specialty: "Dermatology",
+                rating: 4.9,
+                reviews: 203,
+                experience: 10,
+                location: "Delhi NCR",
+                image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop",
+                education: "AIIMS Delhi"
+            },
+            {
+                name: "Dr. Arjun Menon",
+                specialty: "Oncology",
+                rating: 5.0,
+                reviews: 189,
+                experience: 20,
+                location: "Chennai, Tamil Nadu",
+                image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop",
+                education: "Christian Medical College"
+            },
+            {
+                name: "Dr. Amit Patel",
+                specialty: "ENT",
+                rating: 4.7,
+                reviews: 134,
+                experience: 14,
+                location: "Ahmedabad, Gujarat",
+                image: "https://imgs.search.brave.com/T-hx99W-moP6pGuzoQxPP3Jzele9X75CwHfmhcTyAQU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb250/ZW50LmpkbWFnaWNi/b3guY29tL3YyL2Nv/bXAvZ3VyZ2Fvbi9i/NS8wMTFweHgxMS54/eDExLjI1MDUwNzIw/MjIyNi5pOGI1L2Nh/dGFsb2d1ZS9kci1k/ZWVwYWstdmVybWEt/Z3VyZ2Fvbi1zZWN0/b3ItODJhLWd1cmdh/b24tZ2VuZXJhbC1w/aHlzaWNpYW4tZG9j/dG9ycy16cDByMWV4/dGhsLTI1MC5qcGc_/dz02NDAmcT03NQ",
+                education: "KEM Hospital Mumbai"
+            },
+            {
+                name: "Dr. Meera Krishnan",
+                specialty: "Gynecology",
+                rating: 4.9,
+                reviews: 178,
+                experience: 16,
+                location: "Pune, Maharashtra",
+                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
+                education: "CMC Vellore"
+            },
+            {
+                name: "Dr. Kaymore D.",
+                specialty: "Pediatrics",
+                rating: 4.8,
+                reviews: 245,
+                experience: 11,
+                location: "Hyderabad, Telangana",
+                image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=400&fit=crop",
+                education: "AIIMS Delhi"
+            },
+            {
+                name: "Dr. Vikram Singh",
+                specialty: "Cardiology",
+                rating: 4.9,
+                reviews: 198,
+                experience: 15,
+                location: "Bengaluru, Karnataka",
+                image: "https://imgs.search.brave.com/1eDSZd99SlnZGthroihU7XTIBg2wQN6tZKvxaz84Skw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kcnVw/YWwtY2RuLWhmYWVk/ZGNkYm5nNWhmYmcu/YTAxLmF6dXJlZmQu/bmV0L3NpdGVzL2Rl/ZmF1bHQvZmlsZXMv/c3R5bGVzL2RvY3Rv/cl9jYXJkL3B1Ymxp/Yy8yMDI1LTA5L2Ry/LW0uLWJoYXJhdGgt/cmVkZHkuanBnLndl/YnA_aXRvaz12aHRx/VnRydg",
+                education: "PGIMER Chandigarh"
+            },
+            {
+                name: "Dr. Neha Agarwal",
+                specialty: "Orthopedics",
+                rating: 4.6,
+                reviews: 142,
+                experience: 9,
+                location: "Kolkata, West Bengal",
+                image: "https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?w=400&h=400&fit=crop",
+                education: "AIIMS Kolkata"
+            },
+            {
+                name: "Dr. Sanjay Verma",
+                specialty: "Dermatology",
+                rating: 4.8,
+                reviews: 188,
+                experience: 13,
+                location: "Jaipur, Rajasthan",
+                image: "",
+                education: "SMS Medical College"
+            },
+            {
+                name: "Dr. Deepa Nair",
+                specialty: "Oncology",
+                rating: 4.9,
+                reviews: 156,
+                experience: 17,
+                location: "Bengaluru, Karnataka",
+                image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=400&h=400&fit=crop",
+                education: "Tata Memorial Hospital"
+            },
+            {
+                name: "Dr. Rahul Iyer",
+                specialty: "Pediatrics",
+                rating: 5.0,
+                reviews: 221,
+                experience: 12,
+                location: "Chennai, Tamil Nadu",
+                image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop",
+                education: "CMC Vellore"
+            }
+        ];
+
+        // Generate star rating HTML
+        function generateStars(rating) {
+            const fullStars = Math.floor(rating);
+            const hasHalfStar = rating % 1 !== 0;
+            let stars = '';
+            
+            for (let i = 0; i < fullStars; i++) {
+                stars += '★';
+            }
+            if (hasHalfStar) {
+                stars += '☆';
+            }
+            while (stars.length < 5) {
+                stars += '☆';
+            }
+            return stars;
+        }
+
+        // Render doctor cards
+        function renderDoctors(doctorsToRender) {
+            const grid = document.getElementById('doctorsGrid');
+            grid.innerHTML = '';
+            
+            doctorsToRender.forEach((doctor, index) => {
+                const card = document.createElement('div');
+                card.className = 'doctor-card';
+                card.style.animationDelay = `${index * 0.1}s`;
+                
+                card.innerHTML = `
+                    <div class="doctor-image-photo">
+                        <img src="${doctor.image}" alt="${doctor.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="doctor-image-fallback" style="display: none;">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">${doctor.name}</h3>
+                        <p class="doctor-specialty">${doctor.specialty}</p>
+                        <div class="doctor-details">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>${doctor.location}</span>
+                        </div>
+                        <div class="doctor-details">
+                            <i class="fas fa-briefcase"></i>
+                            <span>${doctor.experience} years experience</span>
+                        </div>
+                        <div class="doctor-details">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>${doctor.education}</span>
+                        </div>
+                        <div class="doctor-rating">
+                            <span class="stars">${generateStars(doctor.rating)}</span>
+                            <span>${doctor.rating} (${doctor.reviews} reviews)</span>
+                        </div>
+                        <div class="doctor-actions">
+                            <button class="btn btn-secondary" onclick="viewProfile('${doctor.name}')">
+                                <i class="fas fa-user"></i> View Profile
+                            </button>
+                            <button class="btn btn-primary" onclick="bookAppointment('${doctor.name}')">
+                                <i class="fas fa-calendar-check"></i> Book Appointment
+                            </button>
+                        </div>
+                    </div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter doctors based on search and specialty
+        function filterDoctors() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const specialtyFilter = document.getElementById('specialtyFilter').value;
+            
+            const filtered = doctors.filter(doctor => {
+                const matchesSearch = doctor.name.toLowerCase().includes(searchTerm) || 
+                                    doctor.specialty.toLowerCase().includes(searchTerm);
+                const matchesSpecialty = specialtyFilter === 'all' || doctor.specialty === specialtyFilter;
+                
+                return matchesSearch && matchesSpecialty;
+            });
+            
+            renderDoctors(filtered);
+        }
+
+        // View profile function
+        function viewProfile(doctorName) {
+            alert(`Viewing profile for ${doctorName}\n\nThis feature is coming soon!`);
+        }
+
+        // Book appointment function
+        function bookAppointment(doctorName) {
+            window.location.href = `mailto:appointments@curahealth.com?subject=Appointment Request with ${doctorName}&body=I would like to book an appointment with ${doctorName}.`;
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Render all doctors initially
+            renderDoctors(doctors);
+            
+            // Add event listeners
+            document.getElementById('searchInput').addEventListener('input', filterDoctors);
+            document.getElementById('specialtyFilter').addEventListener('change', filterDoctors);
+        });
+
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+
+        // Close banner
+        const closeBanner = document.getElementById('closeBanner');
+        const banner = document.querySelector('.coming-soon-banner');
+        if (closeBanner && banner) {
+            closeBanner.addEventListener('click', () => {
+                banner.style.display = 'none';
+            });
+        }
+
+        // Scroll to Top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

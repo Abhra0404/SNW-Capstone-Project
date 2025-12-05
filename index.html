@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cura - Home</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <a href="index.html" class="logo">
+                <i class="fas fa-heartbeat"></i>
+                Cura
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pages/about.html">About Us</a></li>
+                <li><a href="pages/services.html">Services</a></li>
+                <li><a href="pages/doctors.html">Find a Doctor</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Refined Minimal) -->
+    <section class="hero hero-min hero-refined">
+        <div class="hero-bg" aria-hidden="true">
+            <div class="hero-gradient"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-inner">
+            <div class="hero-left">
+                <h1>
+                    <span class="hero-headline-top">Personalized Care.</span>
+                    <span class="hero-headline-bottom">Better Outcomes.</span>
+                </h1>
+                <p class="hero-lead">Integrated healthcare experience designed for speed, clarity, and compassion.</p>
+                <div class="hero-cta">
+                    <a href="doctors.html" class="btn btn-primary hero-main-btn">Book Appointment</a>
+                    <a href="services.html" class="btn btn-outline">View Services</a>
+                </div>
+                <ul class="hero-tags" aria-label="Highlights">
+                    <li><i class="fas fa-lock"></i> Secure</li>
+                    <li><i class="fas fa-heart"></i> Compassion</li>
+                    <li><i class="fas fa-bolt"></i> Fast Access</li>
+                </ul>
+            </div>
+            <div class="hero-right">
+                <!-- Minimal EKG line card -->
+                <div class="ekg-card" aria-hidden="true">
+                    <div class="ekg-sheen"></div>
+                    <svg class="ekg" viewBox="0 0 600 220" preserveAspectRatio="none" role="img" aria-label="Animated heartbeat line">
+                        <defs>
+                            <linearGradient id="ekgStroke" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#ffffff"/>
+                                <stop offset="100%" stop-color="#ffffff"/>
+                            </linearGradient>
+                        </defs>
+                        <path class="ekg-path"
+                              d="M0,140 
+                                 L70,140 L90,140 L100,90 L110,170 L120,120 L140,140 
+                                 L210,140 L230,140 L240,80 L250,170 L260,120 L280,140
+                                 L350,140 L370,140 L380,95 L390,170 L400,120 L420,140
+                                 L490,140 L510,140 L520,85 L530,170 L540,120 L560,140
+                                 L600,140" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <h2 class="section-title">Our Key Services</h2>
+            <p class="section-subtitle">Comprehensive healthcare solutions tailored to your needs</p>
+            <div class="services-grid">
+                <a href="services.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Primary Care</h3>
+                    <p>Comprehensive health checks and preventive care for all ages</p>
+                </a>
+                <a href="services.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Cardiology</h3>
+                    <p>Advanced heart care and cardiovascular treatment</p>
+                </a>
+                <a href="services.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Mental Health</h3>
+                    <p>Professional counseling and psychiatric care</p>
+                </a>
+                <a href="services.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Pediatrics</h3>
+                    <p>Specialized healthcare for infants, children, and teens</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Statistics Counter -->
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Our Impact in Numbers</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Trusted by thousands across the region</p>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" data-target="150000">0</div>
+                        <div class="stat-label">Patients Served</div>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" data-target="120">0</div>
+                        <div class="stat-label">Medical Specialists</div>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Healthcare Facilities</div>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" data-target="98">0</div>
+                        <div class="stat-label">% Patient Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Cura?</h2>
+            <p class="section-subtitle">Excellence in healthcare delivery</p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>24/7 Availability</h3>
+                        <p>Round-the-clock medical support and emergency care services</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Expert Doctors</h3>
+                        <p>Board-certified specialists with years of experience</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Advanced Technology</h3>
+                        <p>State-of-the-art medical equipment and facilities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSS-Only Tabbed Interface -->
+    <section class="services-detailed">
+        <div class="container">
+            <h2 class="section-title">Explore Our Services</h2>
+            <p class="section-subtitle">Click on each tab to learn more about our specialized care</p>
+            
+            <div class="tabs-container">
+                <input type="radio" name="tabs" id="tab1" checked>
+                <input type="radio" name="tabs" id="tab2">
+                <input type="radio" name="tabs" id="tab3">
+                <input type="radio" name="tabs" id="tab4">
+
+                <div class="tab-labels">
+                    <label for="tab1" class="tab-label">
+                        <i class="fas fa-heart-pulse"></i>
+                        <span>Cardiology</span>
+                    </label>
+                    <label for="tab2" class="tab-label">
+                        <i class="fas fa-brain"></i>
+                        <span>Neurology</span>
+                    </label>
+                    <label for="tab3" class="tab-label">
+                        <i class="fas fa-baby"></i>
+                        <span>Pediatrics</span>
+                    </label>
+                    <label for="tab4" class="tab-label">
+                        <i class="fas fa-bone"></i>
+                        <span>Orthopedics</span>
+                    </label>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-panel">
+                        <div class="panel-layout">
+                            <div class="panel-text">
+                                <h3>Cardiology Department</h3>
+                                <p>Our cardiology team provides comprehensive heart care using the latest diagnostic and treatment technologies.</p>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Advanced cardiac imaging</li>
+                                    <li><i class="fas fa-check"></i> Interventional procedures</li>
+                                    <li><i class="fas fa-check"></i> Heart failure management</li>
+                                    <li><i class="fas fa-check"></i> Preventive cardiology</li>
+                                </ul>
+                                <a href="services.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                            <div class="panel-image">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel">
+                        <div class="panel-layout">
+                            <div class="panel-text">
+                                <h3>Neurology Department</h3>
+                                <p>Expert care for brain, spine, and nervous system disorders with advanced neurological treatments.</p>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Stroke care and prevention</li>
+                                    <li><i class="fas fa-check"></i> Epilepsy management</li>
+                                    <li><i class="fas fa-check"></i> Movement disorders</li>
+                                    <li><i class="fas fa-check"></i> Neurological rehabilitation</li>
+                                </ul>
+                                <a href="services.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                            <div class="panel-image">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel">
+                        <div class="panel-layout">
+                            <div class="panel-text">
+                                <h3>Pediatrics Department</h3>
+                                <p>Specialized healthcare for children from infancy through adolescence in a child-friendly environment.</p>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Well-child checkups</li>
+                                    <li><i class="fas fa-check"></i> Vaccinations and immunizations</li>
+                                    <li><i class="fas fa-check"></i> Developmental screening</li>
+                                    <li><i class="fas fa-check"></i> Pediatric emergency care</li>
+                                </ul>
+                                <a href="services.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                            <div class="panel-image">
+                                <i class="fas fa-child"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel">
+                        <div class="panel-layout">
+                            <div class="panel-text">
+                                <h3>Orthopedics Department</h3>
+                                <p>Comprehensive musculoskeletal care including joint replacement and sports medicine.</p>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Joint replacement surgery</li>
+                                    <li><i class="fas fa-check"></i> Sports injury treatment</li>
+                                    <li><i class="fas fa-check"></i> Spine surgery</li>
+                                    <li><i class="fas fa-check"></i> Physical therapy</li>
+                                </ul>
+                                <a href="services.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                            <div class="panel-image">
+                                <i class="fas fa-bone"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Testimonials with CSS Progress -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Patients Say</h2>
+            <p class="section-subtitle">Real experiences from people we've helped</p>
+            
+            <div class="testimonials-wrapper">
+                <div class="testimonial-box">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">The care I received at Cura was exceptional. The staff was attentive, and Dr. Martinez explained everything clearly. I felt truly cared for.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-details">
+                            <h4>Sarah Johnson</h4>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div class="testimonial-box">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">Outstanding pediatric care for my children. Dr. Thompson is wonderful with kids and always takes time to address our concerns.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-details">
+                            <h4>Michael Chen</h4>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div class="testimonial-box">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text">The mental health services here are top-notch. Dr. Wu helped me through a difficult period with professionalism and compassion.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-details">
+                            <h4>Emily Rodriguez</h4>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Cura</h3>
+                <p>Your trusted healthcare partner providing comprehensive medical services with compassion and excellence.</p>
+                <div class="social-links" style="margin-top: 1rem;">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Find a Doctor</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="services.html">Primary Care</a></li>
+                    <li><a href="services.html">Cardiology</a></li>
+                    <li><a href="services.html">Pediatrics</a></li>
+                    <li><a href="services.html">Mental Health</a></li>
+                    <li><a href="services.html">Women's Health</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>123 Healthcare Avenue</li>
+                    <li>Bengaluru, Karnataka 560001</li>
+                    <li>+91 80 1234 5678</li>
+                    <li>info@curahealth.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cura. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Animated counter for statistics
+        const animateCounter = (element) => {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    element.textContent = Math.floor(current).toLocaleString();
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target.toLocaleString();
+                }
+            };
+
+            updateCounter();
+        };
+
+        // Intersection Observer for stats
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const numbers = entry.target.querySelectorAll('.stat-number');
+                    numbers.forEach(num => animateCounter(num));
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) statsObserver.observe(statsSection);
+
+        // Scroll to Top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
